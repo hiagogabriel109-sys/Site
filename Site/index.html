@@ -1,94 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
-    <link rel="stylesheet" href="style.css">
+    <title></title>
+   
 </head>
-
 <body>
+    
 
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">MeuSite</h1>
+<h1>Exemplo de formulario</h1>
 
-            <ul class="menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+<form action="cadastro.php " method="get" autocomplete="on">
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <p class="subtitle">BEM-VINDO</p>
-                <h2>Crie algo incrível para a internet.</h2>
-                <p>
-                    Um site moderno, rápido e responsivo feito
-                    com HTML e CSS.
-                </p>
 
-                <a href="#servicos" class="button">Conheça mais</a>
-            </div>
-        </section>
+    <fieldset>
 
-        <section id="sobre" class="section">
-            <h2>Sobre nós</h2>
-            <p>
-                Criamos experiências digitais simples, bonitas e
-                funcionais para pessoas e empresas.
-            </p>
-        </section>
+    <legend>Sexo</legend>
+ 
+        <input type="radio" name="sexo" id="isxmas"> <label for="isxmas">Masculino</label><br>
+        <input type="radio" name="sexo" id="isxfem"> <label for="isxmas"checked >
+            <label for="isxfem">Feminino</label> <br>
+</fieldset>
 
-        <section id="servicos" class="section services">
-            <h2>Nossos serviços</h2>
 
-            <div class="cards">
-                <div class="card">
-                    <span>💻</span>
-                    <h3>Desenvolvimento</h3>
-                    <p>
-                        Sites modernos desenvolvidos para funcionar
-                        em computadores e celulares.
-                    </p>
-                </div>
 
-                <div class="card">
-                    <span>🎨</span>
-                    <h3>Design</h3>
-                    <p>
-                        Interfaces bonitas e intuitivas para melhorar
-                        a experiência dos usuários.
-                    </p>
-                </div>
 
-                <div class="card">
-                    <span>🚀</span>
-                    <h3>Performance</h3>
-                    <p>
-                        Páginas leves e rápidas para oferecer uma
-                        experiência melhor.
-                    </p>
-                </div>
-            </div>
-        </section>
+<fieldset>
+    <legend>Esportes favoritos</legend>
+    <input type="checkbox" name="esbas" id="iesbas" >Basquete <br>
+    <input type="checkbox" name="esfut" id="iesfut" checked >Futebol <br>
+    <input type="checkbox" name="esnat" id="iesnat" >Nataçao <br>
+    <input type="checkbox" name="esten" id="iesten">Tenis <br>
+   
 
-        <section id="contato" class="contact">
-            <h2>Entre em contato</h2>
-            <p>Gostou do projeto? Fale conosco.</p>
-            <a href="mailto:contato@meusite.com" class="button">
-                Enviar mensagem
-            </a>
-        </section>
-    </main>
 
-    <footer>
-        <p>© 2026 MeuSite. Todos os direitos reservados.</p>
-    </footer>
+
+</fieldset>
+
+
+
+
+
+<p>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+</p>
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

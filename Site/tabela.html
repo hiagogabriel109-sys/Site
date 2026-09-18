@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela com Multiplicação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #0288D1;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Carrinho de Compras (Cálculo Automático)</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço Unitário</th>
+                <th>Quantidade</th>
+                <th>Total (Preço × Qtd)</th>
+            </tr>
+        </thead>
+        <tbody id="corpo-tabela"></tbody>
+    </table>
+
+    <script>
+        // 1. Array de objetos com os produtos
+        const produtos = [
+            { nome: "Mouse Gamer", preco: 150.00, quantidade: 2 },
+            { nome: "Teclado Mecânico", preco: 350.00, quantidade: 1 },
+            { nome: "Monitor 24'", preco: 899.90, quantidade: 3 },
+            { nome: "Headset USB", preco: 220.50, quantidade: 2 }
+        ];
+
+        const corpoTabela = document.getElementById("corpo-tabela");
+
+        function gerarTabela() {
+            corpoTabela.innerHTML = "";
+
+            produtos.forEach(produto => {
+                // 2. O JavaScript faz a multiplicação aqui
+                const valorTotal = produto.preco * produto.quantidade;
+
+                const linha = document.createElement("tr");
+
+                // 3. Inserindo os dados e o resultado da multiplicação já formatado
+                linha.innerHTML = `
+                    <td>${produto.nome}</td>
+                    <td>R$ ${produto.preco.toFixed(2)}</td>
+                    <td>${produto.quantidade}</td>
+                    <td><strong>R$ ${valorTotal.toFixed(2)}</strong></td>
+                `;
+
+                corpoTabela.appendChild(linha);
+            });
+        }
+
+        gerarTabela();
+    </script>
+
+</body>
+</html>
